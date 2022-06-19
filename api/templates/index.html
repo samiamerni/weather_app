@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Villes: {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <h3>ville: {{ message['ville'] }} , temperature:   {{ message['temperature'] }}
+                , temperature_max:   {{ message['temperature_max'] }}
+                , temp_min:   {{ message['temp_min'] }}
+                , pression:   {{ message['pression'] }}
+                , humidite :   {{ message['humidite'] }}
+                , main:   {{ message['main'] }}
+                , description:   {{ message['description'] }}
+            </h3>
+            
+        </div>
+    {% endfor %}
+{% endblock %}
